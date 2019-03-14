@@ -9,6 +9,11 @@ class FriendListItem extends Component {
       <li className={styles.friendListItem}>
         <div className={styles.friendInfos}>
           <div><span>{this.props.name}</span></div>
+          {this.props.gender && (
+            <div>
+              <small>Gender: <strong>{this.props.gender}</strong></small>
+            </div>
+          )}
           <div>
             <small>xx friends in common</small>
           </div>

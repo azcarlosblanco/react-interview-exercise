@@ -1,3 +1,3 @@
-export { default as AddFriendInput } from './AddFriendInput';
-export { default as FriendList } from './FriendList';
-export { default as FriendListItem } from './FriendListItem';
+export { default as AddFriendForm } from './AddFriendForm/AddFriendForm';
+export { default as FriendList } from './FriendList/FriendList';
+export { default as FriendListItem } from './FriendList/FriendListItem';

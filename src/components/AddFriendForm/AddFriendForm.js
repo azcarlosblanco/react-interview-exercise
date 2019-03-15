@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
 import styles from './AddFriendForm.css';
+import alertMessages from '../../constants/AlertMessages';
 
 class AddFriendForm extends Component {
   render () {
@@ -73,28 +74,23 @@ class AddFriendForm extends Component {
 
   handleSubmit (e) {
     e.preventDefault();
+
     const { name, gender }  = this.state;
 
     if(name && gender) {
         this.props.addFriend(name, gender);
-        this.setState({ name: '', gender: '', status: messages.success });
+        this.setState({ name: '', gender: '', status: alertMessages.success });
     } else {
+
       if(!name) {
-        this.setState({ status: messages.requiredName });
+        this.setState({ status: alertMessages.requiredName });
+      } else if(!gender) {
+        this.setState({ status: alertMessages.requiredGender });
       }
-      
-      if(!gender) {
-        this.setState({ status: messages.requiredGender });
-      }
+    
     }
   }
 
-}
-
-const messages = {
-  requiredName: "The name field is required",
-  requiredGender : "The gender field is required",
-  success: "Your friend have been added",
 }
 
 AddFriendForm.propTypes = {

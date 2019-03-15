@@ -4,7 +4,6 @@ import FriendListItem from './FriendListItem';
 
 class FriendList extends Component {
   render () {
-    debugger
     return (
       <ul className={styles.friendList}>
         {

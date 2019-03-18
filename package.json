@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "classnames": "^2.2.5",
+    "cuid": "^2.1.6",
     "lodash": "^4.17.4",
     "prop-types": "^15.7.2",
     "react": "^15.5.4",

@@ -35,7 +35,7 @@ const FriendListItem = ({ id, name, gender, starred, starFriend, deleteFriend })
 }
 
 FriendListItem.propTypes = {
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   starred: PropTypes.bool,
   starFriend: PropTypes.func.isRequired,

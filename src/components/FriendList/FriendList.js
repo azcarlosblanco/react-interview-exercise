@@ -7,11 +7,11 @@ const FriendList = ({friends, actions}) => {
   return (
     <ul className={styles.friendList}>
       {
-        friends.map((friend, index) => {
+        friends.map((friend) => {
           return (
             <FriendListItem
-              key={index}
-              id={index}
+              key={friend.id}
+              id={friend.id}
               name={friend.name}
               gender={friend.gender}
               starred={friend.starred}

@@ -1,8 +1,10 @@
 import * as types from '../constants/ActionTypes';
+import cuid from 'cuid';
 
 export function addFriend(name, gender) {
   return {
     type: types.ADD_FRIEND,
+    id: cuid(),
     name,
     gender,
     starred: false

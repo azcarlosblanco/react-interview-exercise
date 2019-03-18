@@ -7,7 +7,7 @@ const actions = {
 }; 
 
 const friend = {
-    id: 0,
+    id: '000000',
     name: 'John F. Kennedy',
     gender: 'male',
     starred: true,

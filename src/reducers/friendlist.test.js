@@ -27,17 +27,19 @@ describe('friends reducer', () => {
 
     it('should remove a friend from list when deleteFriend is called', () => {
         const deleteFriendActionCreator = {
-            id: 0,
+            id: '111111',
             type: actionTypes.DELETE_FRIEND
         }
 
         expect(friends(undefined, deleteFriendActionCreator)).toEqual({
             friendsById: [{
+                    id: '222222',
                     name: 'Abraham Lincoln',
                     starred: false,
                     gender: 'male'
                 },
                 {
+                    id: '333333',
                     name: 'George Washington',
                     starred: false,
                     gender: 'male'
@@ -48,22 +50,25 @@ describe('friends reducer', () => {
 
     it('should star friend when startFriend is called', () => {
         const startFriendActionCreator = {
-            id: 1,
+            id: '222222',
             type: actionTypes.STAR_FRIEND
         }
 
         expect(friends(undefined, startFriendActionCreator)).toEqual({
             friendsById: [{
+                    id: '111111',
                     name: 'Theodore Roosevelt',
                     starred: true,
                     gender: 'male'
                 },
                 {
+                    id: '222222',
                     name: 'Abraham Lincoln',
                     starred: true,
                     gender: 'male'
                 },
                 {
+                    id: '333333',
                     name: 'George Washington',
                     starred: false,
                     gender: 'male'

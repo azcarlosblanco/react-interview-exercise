@@ -69,7 +69,7 @@ describe('FriendListApp Component', () => {
             wrapper.instance().setState(data);
             const filteredFriends = wrapper.instance().getCurrentFriends(initialState.friendsById);
 
-            expect(filteredFriends).toEqual([ { name: 'George Washington', starred: false, gender: 'male' } ]);
+            expect(filteredFriends).toEqual([ { id: '333333', name: 'George Washington', starred: false, gender: 'male' } ]);
         });
     })
 });

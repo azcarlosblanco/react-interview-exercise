@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import styles from './AddFriendForm.css';
 import alertMessages from '../../constants/AlertMessages';

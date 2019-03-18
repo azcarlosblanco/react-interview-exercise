@@ -1,29 +1,28 @@
-import React, { Component, PropTypes } from 'react';
+import React, { PropTypes } from 'react';
 import styles from './FriendList.css';
 import FriendListItem from './FriendListItem';
 
-class FriendList extends Component {
-  render () {
-    return (
-      <ul className={styles.friendList}>
-        {
-          this.props.friends.map((friend, index) => {
-            return (
-              <FriendListItem
-                key={index}
-                id={index}
-                name={friend.name}
-                gender={friend.gender}
-                starred={friend.starred}
-                {...this.props.actions} />
-            );
-          })
-        }
-      </ul>
-    );
-  }
-
+const FriendList = ({friends, actions}) => {
+  return (
+    <ul className={styles.friendList}>
+      {
+        friends.map((friend, index) => {
+          return (
+            <FriendListItem
+              key={index}
+              id={index}
+              name={friend.name}
+              gender={friend.gender}
+              starred={friend.starred}
+              {...actions} />
+          );
+        })
+      }
+    </ul>
+  );
 }
+
+
 
 FriendList.propTypes = {
   friends: PropTypes.array.isRequired,

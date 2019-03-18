@@ -1,5 +1,5 @@
 import * as actionTypes from '../constants/ActionTypes';
-import { initialState, friends } from './friendlist';
+import friends, { initialState } from './friendlist';
 
 describe('friends reducer', () => {
 

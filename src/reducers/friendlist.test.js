@@ -14,15 +14,8 @@ describe('friends reducer', () => {
             starred: false,
             type: actionTypes.ADD_FRIEND
         }
-
-        const {
-            type,
-            ...newFriend
-        } = newFriendActionCreator;
-
-        expect(friends(undefined, newFriendActionCreator)).toEqual({
-            friendsById: [...initialState.friendsById, newFriend]
-        });
+        
+        expect(friends(undefined, newFriendActionCreator).friendsById.length).toBe(initialState.friendsById.length + 1);
     });
 
     it('should remove a friend from list when deleteFriend is called', () => {

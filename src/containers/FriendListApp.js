@@ -11,10 +11,7 @@ class FriendListApp extends Component {
   render () {
     const { friendlist: { friendsById }} = this.props;
     const totalFriends = friendsById.length;
-
-    const { currentPage, pageLimit } = this.state;
-    const offset = (currentPage - 1) * pageLimit;
-    const currentFriends = friendsById.slice(offset, offset + pageLimit);
+    const currentFriends = this.getCurrentFriends(friendsById);
 
     const actions = {
       addFriend: this.props.addFriend,
@@ -37,17 +34,25 @@ class FriendListApp extends Component {
     );
   }
 
-  constructor(props) {
-    super(props);
+  constructor (props, context) {
+    super(props, context);
 
     this.state = { currentPage: null, pageLimit: null  }
 
     this.onPageChanged = this.onPageChanged.bind(this);
+    this.getCurrentFriends = this.getCurrentFriends.bind(this);
   }
 
   onPageChanged(data) {
     const { currentPage, pageLimit } = data;
     this.setState({ currentPage, pageLimit });
+  }
+
+  getCurrentFriends(friends) {
+    const { currentPage, pageLimit } = this.state;
+    const offset = (currentPage - 1) * pageLimit;
+
+    return friends.slice(offset, offset + pageLimit);
   }
 }
 

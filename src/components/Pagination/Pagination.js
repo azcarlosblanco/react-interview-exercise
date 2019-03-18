@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import './Pagination.css';
+import styles from './Pagination.css';
 
 const LEFT_PAGE = 'LEFT';
 const RIGHT_PAGE = 'RIGHT';
@@ -28,7 +28,7 @@ class Pagination extends Component {
 
     return (
       <div>
-        <nav aria-label="Friends Pagination">
+        <nav className={styles.nav} aria-label="Friends Pagination">
           <ul className="pagination">
             { pages.map((page, index) => {
 

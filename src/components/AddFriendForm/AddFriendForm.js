@@ -13,7 +13,7 @@ class AddFriendForm extends Component {
               type="text"
               name="name"
               autoFocus="true"
-              className={classnames('form-control', styles.addFriendInput)}
+              className="form-control"
               placeholder="Type the name of a friend"
               value={this.state.name}
               onChange={this.onInputChange}
@@ -26,7 +26,6 @@ class AddFriendForm extends Component {
                 type="radio" 
                 name="gender" 
                 value="male" 
-                className={classnames(styles.genderFriendInput)} 
                 onChange={this.onInputChange}
               />
               Male
@@ -37,7 +36,6 @@ class AddFriendForm extends Component {
               <input type="radio" 
                 name="gender"
                 value="female" 
-                className={classnames(styles.genderFriendInput)} 
                 onChange={this.onInputChange}
               />
               Female

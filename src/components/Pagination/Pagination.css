@@ -1,4 +1,4 @@
-nav {
+:local(.nav) {
     display: flex;
     justify-content: center;
 }

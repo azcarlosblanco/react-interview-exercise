@@ -53,7 +53,7 @@ describe('FriendListApp Component', () => {
             );
         });
 
-        fit('should set state on page change', () => {    
+        it('should set state on page change', () => {    
             const data = { currentPage: 1, pageLimit: 2 };
             const wrapper = component.dive({ context: { store }}).dive({ context: { store }});
 
@@ -62,7 +62,7 @@ describe('FriendListApp Component', () => {
             expect(wrapper.state()).toEqual(data);
         });
 
-        fit('should return filter friends correctly', () => {    
+        it('should return filter friends correctly', () => {    
             const data = { currentPage: 2, pageLimit: 2 };
             const wrapper = component.dive({ context: { store }}).dive({ context: { store }});
 
